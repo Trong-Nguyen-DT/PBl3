@@ -29,6 +29,11 @@ namespace Quanlybantrasua
                     GUI f = new GUI();
                     f.Show();
                 }
+                else
+                {
+                    Quanlyhanghoa f = new Quanlyhanghoa();
+                    f.ShowDialog();
+                }
 
             }
             else

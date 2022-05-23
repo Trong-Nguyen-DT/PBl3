@@ -27,6 +27,19 @@ namespace Quanlybantrasua.BLL
         {
 
         }
+        public List<CbbLHH> GetCbbLHH()
+        {
+            List<CbbLHH> data = new List<CbbLHH>();
+            foreach (Loai_HANGHOA i in db.Loai_HANGHOA)
+            {
+                data.Add(new CbbLHH
+                {
+                    ID_LHH = i.ID_LHH,
+                    Ten_LHH = i.Ten_LHH
+                });
+            }
+            return data;
+        }
         public List<CbbLKH> GetCBBLKH()
         {
             List<CbbLKH> data = new List<CbbLKH>();
@@ -65,7 +78,14 @@ namespace Quanlybantrasua.BLL
         public List<Hanghoa_View> GetAllHH_View()
         {
             List<Hanghoa_View> data = new List<Hanghoa_View>();
-            data = db.HANGHOAs.Select(p => new Hanghoa_View { ID_HH = p.ID_HH,Ten_HH = p.Ten_HH, Gia = (int)p.Gia }).ToList();
+            data = db.HANGHOAs.Select(p => new Hanghoa_View { ID_HH = p.ID_HH,Ten_HH = p.Ten_HH,Gia=(int)p.Gia}).ToList();
+
+            return data;
+        }
+        public List<Hanghoastate> GetAllHHTinhtrang()
+        {
+            List<Hanghoastate> data = new List<Hanghoastate>();
+            data = db.HANGHOAs.Select(p => new Hanghoastate { ID_HH = p.ID_HH, Ten_HH = p.Ten_HH, Gia = (int)p.Gia,Tinhtrang=(bool)p.tinhTrang }).ToList();
 
             return data;
         }
@@ -267,6 +287,30 @@ namespace Quanlybantrasua.BLL
             List<ChitiethoadonView> data = new List<ChitiethoadonView>();
             return data;
         }
-
+        public void addhh(HANGHOA h)
+        { 
+            db.HANGHOAs.Add(h);
+            db.SaveChanges();
+        }
+        public List<Loai_HANGHOA> GetAllLhh()
+        {
+            List<Loai_HANGHOA> data = new List<Loai_HANGHOA> ();
+            data = db.Loai_HANGHOA.ToList();
+            return data;
+        }
+        public void AddLhh(Loai_HANGHOA s)
+        {
+            db.Loai_HANGHOA.Add(s);
+            db.SaveChanges ();
+        }
+        public List<string> GetAllTenLHH()
+        {
+            List<string> data = new List<string>();
+            foreach(Loai_HANGHOA i in db.Loai_HANGHOA)
+            {
+                data.Add(i.Ten_LHH);
+            }
+            return data;
+        }
     }
 }

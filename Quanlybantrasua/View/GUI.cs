@@ -226,7 +226,7 @@ namespace Quanlybantrasua
         {
             if (DGVFood.SelectedRows.Count > 0)
             {
-                MessageBox.Show("Bạn có muốn xóa không");
+                MessageBox.Show("Bạn có muốn xóa không ?");
             }
         }
     }

@@ -64,8 +64,10 @@
       <DependentUpon>QLTS.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\CbbItems.cs" />
+    <Compile Include="DTO\CbbLHH.cs" />
     <Compile Include="DTO\CbbLKH.cs" />
     <Compile Include="DTO\ChitiethoadonView.cs" />
+    <Compile Include="DTO\Hanghoastate.cs" />
     <Compile Include="DTO\Hanghoa_View.cs" />
     <Compile Include="HANGHOA.cs">
       <DependentUpon>QLTS.tt</DependentUpon>
@@ -104,6 +106,12 @@
     </Compile>
     <Compile Include="sysdiagram.cs">
       <DependentUpon>QLTS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddLhh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddLhh.Designer.cs">
+      <DependentUpon>AddLhh.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Formchuyenban.cs">
       <SubType>Form</SubType>
@@ -181,6 +189,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\AddLhh.resx">
+      <DependentUpon>AddLhh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Formchuyenban.resx">
       <DependentUpon>Formchuyenban.cs</DependentUpon>
     </EmbeddedResource>
