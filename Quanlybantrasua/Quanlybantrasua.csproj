@@ -173,6 +173,12 @@
     <Compile Include="View\Quanlyhanghoa.Designer.cs">
       <DependentUpon>Quanlyhanghoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Tankbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Tankbar.Designer.cs">
+      <DependentUpon>Tankbar.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Themmon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Quanlyhanghoa.resx">
       <DependentUpon>Quanlyhanghoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Tankbar.resx">
+      <DependentUpon>Tankbar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Themmon.resx">
       <DependentUpon>Themmon.cs</DependentUpon>

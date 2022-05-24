@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Quanlybantrasua.BLL;
+using Quanlybantrasua.View;
 
 namespace Quanlybantrasua
 {
@@ -17,18 +18,11 @@ namespace Quanlybantrasua
         {
             InitializeComponent();
             Timer.Start();
-            GUI();
         }
-        public void GUI()
-        {
-           danhsachhanghoa.DataSource = BLLQLTS.Instance.GetAllHHTinhtrang();
-        }
-
         private void Them_Click(object sender, EventArgs e)
         {
             Themmon tm = new Themmon();
             tm.ShowDialog();
-            GUI();
         }
 
         private void thoat_Click(object sender, EventArgs e)
@@ -52,6 +46,8 @@ namespace Quanlybantrasua
         private void btHH_Click(object sender, EventArgs e)
         {
             Thanhlucchon(btHH);
+            var myControl = new Quanlybantrasua.View.Tankbar();
+            panel1.Controls.Add(myControl);
         }
 
         private void btNV_Click(object sender, EventArgs e)
@@ -69,5 +65,7 @@ namespace Quanlybantrasua
             DateTime dt = DateTime.Now;
             TG.Text = dt.ToString("HH:mm:ss");
         }
+
+       
     }
 }
