@@ -16,6 +16,7 @@ namespace Quanlybantrasua
         public Quanlyhanghoa()
         {
             InitializeComponent();
+            Timer.Start();
             GUI();
         }
         public void GUI()
@@ -41,6 +42,32 @@ namespace Quanlybantrasua
             //{
             //    MessageBox.Show("Bạn có muốn xóa không ?");
             //}
+        }
+        private void Thanhlucchon(Control tlc)
+        {
+            TLC.Top = tlc.Top;
+            TLC.Height = tlc.Height;
+        }
+
+        private void btHH_Click(object sender, EventArgs e)
+        {
+            Thanhlucchon(btHH);
+        }
+
+        private void btNV_Click(object sender, EventArgs e)
+        {
+            Thanhlucchon(btNV);
+        }
+
+        private void btDT_Click(object sender, EventArgs e)
+        {
+            Thanhlucchon(btDT);
+        }
+
+        private void Time_Tick(object sender, EventArgs e)
+        {
+            DateTime dt = DateTime.Now;
+            TG.Text = dt.ToString("HH:mm:ss");
         }
     }
 }
