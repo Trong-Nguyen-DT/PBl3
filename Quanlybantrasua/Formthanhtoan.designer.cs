@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Quanlybantrasua
+namespace thayp
 {
     partial class xemdon
     {
