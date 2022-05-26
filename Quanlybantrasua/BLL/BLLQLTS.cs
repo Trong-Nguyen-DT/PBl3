@@ -153,7 +153,7 @@ namespace Quanlybantrasua.BLL
         public List<ChitiethoadonView> GetDetailBill(int IDHD)
         {
             List<ChitiethoadonView> data = new List<ChitiethoadonView>();
-            data = db.CHI_TIET_HOA_DON.Where(p=>p.HOA_DON.ID_HD==IDHD).Select(p => new ChitiethoadonView {Ten_HH = p.HANGHOA.Ten_HH, soluong = (int)p.soluong }).ToList();
+            data = db.CHI_TIET_HOA_DON.Where(p=>p.HOA_DON.ID_HD==IDHD && p.soluong > 0).Select(p => new ChitiethoadonView {Ten_HH = p.HANGHOA.Ten_HH, soluong = (int)p.soluong }).ToList();
             return data;
         }
         public bool CheckKH(int PhoneNB)
@@ -183,7 +183,7 @@ namespace Quanlybantrasua.BLL
                 s.Diemtichluy += k.Diemtichluy;
                 if (s.Diemtichluy > 500)
                 {
-                    s.ID_LKH = 2;
+                    s.ID_LKH = 2;  
                 }
             }
             db.SaveChanges();
@@ -311,6 +311,18 @@ namespace Quanlybantrasua.BLL
                 data.Add(i.Ten_LHH);
             }
             return data;
+        }
+        public void UpdateTT(int ID_HD)
+        {
+            HOA_DON s = db.HOA_DON.Where(p => p.ID_HD == ID_HD).Select(p => p).FirstOrDefault();
+            s.Thanhtoan = true;
+            db.SaveChanges();
+        }
+        public void DelUpCTHD(int ID_CTHD, int soluong)
+        {
+            CHI_TIET_HOA_DON s = db.CHI_TIET_HOA_DON.Find(ID_CTHD);
+            s.soluong = soluong;
+            db.SaveChanges();
         }
     }
 }

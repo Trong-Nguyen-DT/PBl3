@@ -52,7 +52,7 @@ namespace Quanlybantrasua
             this.ban19 = new System.Windows.Forms.Button();
             this.ban20 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button23 = new System.Windows.Forms.Button();
+            this.butThanhtoan = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -368,14 +368,15 @@ namespace Quanlybantrasua
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
-            // button23
+            // butThanhtoan
             // 
-            this.button23.Location = new System.Drawing.Point(1057, 653);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(94, 70);
-            this.button23.TabIndex = 7;
-            this.button23.Text = "Thanh toán";
-            this.button23.UseVisualStyleBackColor = true;
+            this.butThanhtoan.Location = new System.Drawing.Point(1057, 653);
+            this.butThanhtoan.Name = "butThanhtoan";
+            this.butThanhtoan.Size = new System.Drawing.Size(94, 70);
+            this.butThanhtoan.TabIndex = 7;
+            this.butThanhtoan.Text = "Thanh toán";
+            this.butThanhtoan.UseVisualStyleBackColor = true;
+            this.butThanhtoan.Click += new System.EventHandler(this.butThanhtoan_Click);
             // 
             // button24
             // 
@@ -806,7 +807,7 @@ namespace Quanlybantrasua
             this.Controls.Add(this.txtNameKH);
             this.Controls.Add(this.button25);
             this.Controls.Add(this.button24);
-            this.Controls.Add(this.button23);
+            this.Controls.Add(this.butThanhtoan);
             this.Controls.Add(this.button27);
             this.Controls.Add(this.butDel);
             this.Controls.Add(this.butUpdate);
@@ -869,7 +870,7 @@ namespace Quanlybantrasua
         private System.Windows.Forms.Button ban19;
         private System.Windows.Forms.Button ban20;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button23;
+        private System.Windows.Forms.Button butThanhtoan;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Label label2;
