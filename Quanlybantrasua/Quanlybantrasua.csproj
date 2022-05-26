@@ -69,6 +69,18 @@
     <Compile Include="DTO\ChitiethoadonView.cs" />
     <Compile Include="DTO\Hanghoastate.cs" />
     <Compile Include="DTO\Hanghoa_View.cs" />
+    <Compile Include="FormQLdoanhthu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLdoanhthu.designer.cs">
+      <DependentUpon>FormQLdoanhthu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formthanhtoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formthanhtoan.designer.cs">
+      <DependentUpon>Formthanhtoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="HANGHOA.cs">
       <DependentUpon>QLTS.tt</DependentUpon>
     </Compile>
@@ -146,7 +158,7 @@
     <Compile Include="View\FormQLdoanhthu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormQLdoanhthu.Designer.cs">
+    <Compile Include="View\FormQLdoanhthu.designer.cs">
       <DependentUpon>FormQLdoanhthu.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormQLkhachhang.cs">
@@ -167,6 +179,12 @@
     <Compile Include="View\GUI.Designer.cs">
       <DependentUpon>GUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\QLDT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\QLDT.designer.cs">
+      <DependentUpon>QLDT.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Quanlyhanghoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +203,12 @@
     <Compile Include="View\Themmon.designer.cs">
       <DependentUpon>Themmon.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormQLdoanhthu.resx">
+      <DependentUpon>FormQLdoanhthu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formthanhtoan.resx">
+      <DependentUpon>Formthanhtoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -218,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\GUI.resx">
       <DependentUpon>GUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\QLDT.resx">
+      <DependentUpon>QLDT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Quanlyhanghoa.resx">
       <DependentUpon>Quanlyhanghoa.cs</DependentUpon>

@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace quanlitrasua
+namespace Quanlybantrasua.View
 {
     public partial class Doanhthu : Form
     {
@@ -10,9 +10,11 @@ namespace quanlitrasua
             InitializeComponent();
         }
 
-        private void Doanhthu_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
+
+       
     }
 }
