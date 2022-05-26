@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Quanlybantrasua.BLL;
+using Quanlybantrasua.View;
 
 namespace Quanlybantrasua
 {
@@ -16,18 +17,12 @@ namespace Quanlybantrasua
         public Quanlyhanghoa()
         {
             InitializeComponent();
-            GUI();
+            Timer.Start();
         }
-        public void GUI()
-        {
-           danhsachhanghoa.DataSource = BLLQLTS.Instance.GetAllHHTinhtrang();
-        }
-
         private void Them_Click(object sender, EventArgs e)
         {
             Themmon tm = new Themmon();
             tm.ShowDialog();
-            GUI();
         }
 
         private void thoat_Click(object sender, EventArgs e)
@@ -42,5 +37,35 @@ namespace Quanlybantrasua
             //    MessageBox.Show("Bạn có muốn xóa không ?");
             //}
         }
+        private void Thanhlucchon(Control tlc)
+        {
+            TLC.Top = tlc.Top;
+            TLC.Height = tlc.Height;
+        }
+
+        private void btHH_Click(object sender, EventArgs e)
+        {
+            Thanhlucchon(btHH);
+            var myControl = new Quanlybantrasua.View.Tankbar();
+            panel1.Controls.Add(myControl);
+        }
+
+        private void btNV_Click(object sender, EventArgs e)
+        {
+            Thanhlucchon(btNV);
+        }
+
+        private void btDT_Click(object sender, EventArgs e)
+        {
+            Thanhlucchon(btDT);
+        }
+
+        private void Time_Tick(object sender, EventArgs e)
+        {
+            DateTime dt = DateTime.Now;
+            TG.Text = dt.ToString("HH:mm:ss");
+        }
+
+       
     }
 }

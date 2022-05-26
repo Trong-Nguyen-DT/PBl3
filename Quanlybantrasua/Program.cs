@@ -16,7 +16,7 @@ namespace Quanlybantrasua
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formdangnhap());
+            Application.Run(new Quanlyhanghoa());
         }
     }
 }

@@ -30,7 +30,6 @@ namespace Quanlybantrasua.View
                 if (i == lhh.Ten_LHH)
                 {
                     return true;
-                    break;
                 }
             }
             return false;

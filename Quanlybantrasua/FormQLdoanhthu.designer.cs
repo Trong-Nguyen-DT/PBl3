@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Quanlybantrasua.View
+namespace Quanlybantrasua
 {
     partial class Doanhthu
     {

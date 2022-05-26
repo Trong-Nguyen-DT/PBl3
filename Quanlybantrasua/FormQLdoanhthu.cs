@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace Quanlybantrasua.View
+namespace Quanlybantrasua
 {
     public partial class Doanhthu : Form
     {
